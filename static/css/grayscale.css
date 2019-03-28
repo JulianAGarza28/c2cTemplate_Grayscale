@@ -207,7 +207,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .signup-section .form-inline input {
@@ -296,6 +296,19 @@ footer {
 }
 .bg-grey {
  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.8) 80%, rgba(22, 22, 22, 0.8) 30%, #161616 100%);
+}
+
+.center {
+    Margin: 2px;
+    text-align: center;
+    display: block;
+    max-width: 500px;
+}
+
+.height {
+    max-height: 300px;
+    text-align: left;
+    display: block;
 }
 
 

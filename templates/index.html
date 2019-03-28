@@ -132,21 +132,30 @@
 
     <!-- Signup Section -->
     <section id="signup" class="signup-section">
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <div class="col-md-9 col-lg-8 mx-auto text-center">
 
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <i class="far fa-paper-plane fa-2x mb-4 text-white"></i>
             <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-            <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-            </form>
-
-          </div>
         </div>
-      </div>
+        </div>
+        <form action="https://formspree.io/julian.a.garza11@gmail.com" method="POST" class="center mx-auto">
+        <div class="row col-lg-8 flex-fill mx-auto text-center">
+            <label for="inputName">Name</label>
+            <input type="Name" name="name" class="form-control flex-fill col-lg-4 center" id="inputName" placeholder="Enter Full Name...">
+            <label for="inputEmail">Email</label>
+            <input type="Email" class="form-control flex-fill col-lg-4 center" name="_replyto "id="inputEmail" placeholder="Enter Email...">
+
+        <div class="row col-lg-16 flex-fill text-center">
+            <label for="inputMessage">Message</label>
+            <textarea class="form-control flex-fill col-lg-14 center height" name="message" id="inputMessage" placeholder="Enter Message..."></textarea>
+            <div class="row center">
+            <button type="submit" id="email-submit-btn" value="Send" class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </div>
+        </form>
     </section>
 
     <!-- Contact Section -->
