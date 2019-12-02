@@ -20,7 +20,8 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/css/grayscale.css" rel="stylesheet">
-
+    <script src="../static/js/grayscale.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body id="page-top">
@@ -44,6 +45,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#pricing">Pricing</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -54,7 +58,7 @@
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
           <h1 class="mx-auto my-0 text-uppercase">Flying Car</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">A way to explore transportation.</h2>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">Life seen from a whole new perspective.</h2>
           <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
         </div>
       </div>
@@ -80,16 +84,21 @@
 
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div class="col-xl-6 col-lg-5">
-            <img class="img-fluid mb-3 mb-lg-0" src="../static/img/BlueprintBTF.png" alt="">
+          <div class="col-lg-6">
+            <img class="img-fluid mb-2 ml-0" src="../static/img/flying.jpg" alt="">
           </div>
-          <div class="col-xl-2 col-lg-5">
-            <div class="featured-text text-center text-lg-left">
-              <h4 class="text-white">Design</h4>
-              <p class="text-white-50 mb-0">Design of the ways that the flying cars will function!</p>
+          <div class="col-lg-6">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                    <div class="project-text w-90 my-auto text-center text-lg-left">
+                    <h4 class="text-white">Design</h4>
+                    <p class="text-white-50 mb-0">The blueprints to the vehicle show the capability of how it can be functional. This is humanites greatest achievement.</p>
+                    <hr class="d-none d-lg-block mb-0 ml-0">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </div>
 
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -101,7 +110,7 @@
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-left">
                   <h4 class="text-white">Alternatives</h4>
-                  <p class="mb-0 text-white-50">Ways that it will help the environment and stop polution.</p>
+                  <p class="mb-0 text-white-50">Ways that it will help the environment and stop polution. This will benifit the world because you use less resources. Pollution has been a huge part of humanities greatest weaknesses and this will help stop a good amount of it.</p>
                   <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
@@ -112,14 +121,14 @@
         <!-- Project Two Row -->
         <div class="row justify-content-center no-gutters">
           <div class="col-lg-6">
-            <img class="img-fluid" src="../static/img/FlyingCar3.jpg" alt="">
+            <img class="img-fluid" src="../static/img/flyingcar.jpg" alt="">
           </div>
           <div class="col-lg-6 order-lg-first">
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-right">
                   <h4 class="text-white">Assistance</h4>
-                  <p class="mb-0 text-white-50">A way of helping the human race go new places.</p>
+                  <p class="mb-0 text-white-50">A way of helping the human race go new places. Travel is a huge part of life, and getting there quick is always a better deal.</p>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
@@ -143,19 +152,52 @@
         <form action="https://formspree.io/julian.a.garza11@gmail.com" method="POST" class="center mx-auto">
         <div class="row col-lg-8 flex-fill mx-auto text-center">
             <label for="inputName">Name</label>
-            <input type="Name" name="name" class="form-control flex-fill col-lg-4 center" id="inputName" placeholder="Enter Full Name...">
+            <input type="Name" name="name" class="form-control flex-fill col-lg-4 center" id="inputName" placeholder="Enter Full Name..." required>
             <label for="inputEmail">Email</label>
-            <input type="Email" class="form-control flex-fill col-lg-4 center" name="_replyto "id="inputEmail" placeholder="Enter Email...">
+            <input type="Email" class="form-control flex-fill col-lg-4 center" name="_replyto "id="inputEmail" placeholder="Enter Email..." required>
 
         <div class="row col-lg-16 flex-fill text-center">
             <label for="inputMessage">Message</label>
-            <textarea class="form-control flex-fill col-lg-14 center height" name="message" id="inputMessage" placeholder="Enter Message..."></textarea>
+            <textarea class="form-control flex-fill col-lg-14 center height" name="message" id="inputMessage" placeholder="Enter Message..." required></textarea>
             <div class="row center">
             <button type="submit" id="email-submit-btn" value="Send" class="btn btn-primary">Subscribe</button>
             </div>
         </div>
     </div>
         </form>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section bg-black">
+      <div class="container">
+        <div class="row">
+                <h2 class="my-2 col-sm-12 larger text-center">Pricing</h2>
+            </div>
+            <div class="row col-lg-4 flex-fill mx-auto">
+                <label for="engine" class="text-secondary">Engine</label>
+                <select class="form-control" name="engine" id="engine">
+                    <option value="Engine1">Gold Engine</option>
+                    <option value="Engine2">Platinum Engine</option>
+                    <option value="Engine3">Diamond Engine</option>
+                </select>
+                <label for="wheel" class="text-secondary">Wheel</label>
+                <select class="form-control" name="wheel" id="wheel">
+                    <option value="Wheel1">Copper Wheel</option>
+                    <option value="Wheel2">Gold Wheel</option>
+                    <option value="Wheel3">Platinum Wheel</option>
+                </select>
+                <label for="window" class="text-secondary">Window</label>
+                <select class="form-control" name="window" id="window">
+                    <option value="Window1">Clear Window</option>
+                    <option value="Window2">Grey Window</option>
+                    <option value="Window3">Black Window</option>
+                </select>
+                <button onclick="getDataFromApi()" class="my-2 col-sm-4 margin-center">Get Pricing</button>
+                <div id="api_status" class="my-2 col-sm-4"></div>
+            </div>
+            <div id="api_data" class="center card-columns mx-auto semi"></div>
+    </div>
+         <div id="total_data" class="center mx-auto bold"></div>
     </section>
 
     <!-- Contact Section -->
@@ -230,7 +272,7 @@
     <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="../static/js/grayscale.min.js"></script>
+    <script src="../static/js/grayscale.js"></script>
 
   </body>
 

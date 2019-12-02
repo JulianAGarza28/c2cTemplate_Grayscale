@@ -201,13 +201,50 @@
   }
 }
 
+.pricing-section {
+  padding: 10rem 0;
+}
+
+.pricing-section p2{
+    font-size: 100%;
+}
+
+.pricing-section h2,p,p2 {
+    color: white;
+}
+.pricing-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .pricing-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #1059ce;
+  }
+}
+
+.pricing-section .pricing-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .pricing-section .pricing-text {
+    padding: 5rem;
+  }
+  .pricing-section .pricing-text hr {
+    border-color: #1059ce;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/Galaxy2.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%),linear-gradient(to top, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/Galaxy2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  /*background-size: cover;*/
+  background-size: cover;
 }
 
 .signup-section .form-inline input {
@@ -219,6 +256,10 @@
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+}
+
+.signup-section label{
+    color: white;
 }
 
 .contact-section {
@@ -291,6 +332,10 @@ a:focus, a:hover {
   color: #1059ce !important;
 }
 
+.text-secondary {
+    color: white !important;
+}
+
 footer {
   padding: 5rem 0;
 }
@@ -311,7 +356,20 @@ footer {
     display: block;
 }
 
+.bold {
+    font-weight: bold;
+    font-size: 3rem;
+}
 
+.semi {
+    font-size: 1rem;
+}
+
+.table {
+    background-color: gray;
+    border-color: white;
+    border-style: solid;
+}
 
 
 

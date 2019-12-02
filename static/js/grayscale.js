@@ -63,3 +63,92 @@ $(document).ready(function() {
     }
   });
 });
+
+function getDataFromApi() {
+    var status = document.getElementById("api_status");
+    status.innerText = 'Fetching data from API...';
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/pricing.json');
+    xhr.setRequestHeader('Content-type','application/json')
+
+    xhr.onload = function() {
+
+        if (xhr.status === 200) {
+            var apiResponse = JSON.parse(xhr.responseText);
+            console.log(apiResponse);
+
+            var apiData = document.getElementById("api_data");
+            apiData.innerHTML = '';
+
+            apiResponse.part.forEach(function(pricing) {
+                addTable(pricing);
+            });
+            addTotal(apiResponse.total);
+            status.innerText = '';
+        }
+        else {
+            alert('Request failed. Returned status of ' + xhr.status);
+            status.innerText = 'Error: Could not get data from API.';
+        }
+    };
+    var e = document.getElementById("engine");
+    var engine = e.options[e.selectedIndex].text;
+    var w = document.getElementById("wheel");
+    var wheel = w.options[w.selectedIndex].text;
+    var wi = document.getElementById("window");
+    var windows = wi.options[wi.selectedIndex].text;
+    xhr.send(JSON.stringify({'engine':engine, 'wheel':wheel,'windows':windows}));
+}
+
+function addTable(pricing) {
+    var apiData = document.getElementById("api_data");
+        var table = document.createElement("p");
+        table.classList.add("table");
+        table.textContent = pricing.name;
+        apiData.appendChild(table);
+
+        var tableBody = document.createElement("div");
+        tableBody.classList.add("table-body");
+        tableBody.textContent = pricing.body;
+        table.appendChild(tableBody);
+}
+
+function addTotal(total) {
+     var totalData = document.getElementById("total_data");
+            totalData.innerHTML = '';
+            totalData.classList.add("table");
+
+        var table2 = document.createElement("p2");
+        table2.classList.add("table2","result");
+        table2.textContent = "Total";
+        totalData.appendChild(table2);
+
+        var tableBody = document.createElement("div");
+        tableBody.classList.add("table-body");
+        tableBody.textContent = total;
+        table2.appendChild(tableBody);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
